@@ -1,0 +1,445 @@
+# Instincts generated from https://github.com/NGshiyu/microfeed
+# Generated: 2026-08-01T04:25:53.696Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: microfeed-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Commit Length
+
+## Action
+
+Keep commit messages concise (~27 characters)
+
+## Evidence
+
+- Average commit message length: 27 chars
+- Based on 2 commits
+
+---
+id: microfeed-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: microfeed-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Export Style
+
+## Action
+
+Prefer default exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: default
+
+---
+id: microfeed-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: client, components, layouts, lib, pages
+
+---
+id: microfeed-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: microfeed-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.ts
+
+---
+id: microfeed-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: microfeed-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: no
+
+---
+id: microfeed-workflow-fix-unit-tests
+trigger: "when doing fix unit tests"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/NGshiyu/microfeed
+---
+
+# Microfeed Workflow Fix Unit Tests
+
+## Action
+
+Follow the fix-unit-tests workflow:
+1. Identify failing or outdated unit tests.
+2. Edit the relevant test files to fix issues or update expectations.
+3. Run the test suite to verify fixes.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: tests/unit/**/*.test.ts
+
+---
+id: microfeed-instinct-file-naming-camelCase
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct File Naming CamelCase
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Consistent with TypeScript community standards
+
+---
+id: microfeed-instinct-function-naming-camelCase
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Function Naming CamelCase
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- TypeScript code style conventions
+
+---
+id: microfeed-instinct-class-naming-PascalCase
+trigger: "When declaring a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Class Naming PascalCase
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: microfeed-instinct-constant-naming-SCREAMING_SNAKE_CASE
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Constant Naming SCREAMING_SNAKE_CASE
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: microfeed-instinct-import-style-mixed
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Import Style Mixed
+
+## Action
+
+Use a mixed import style (both default and named imports as appropriate)
+
+## Evidence
+
+- Pattern in importStyle: mixed
+
+---
+id: microfeed-instinct-export-style-default
+trigger: "When exporting modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Export Style Default
+
+## Action
+
+Prefer default exports
+
+## Evidence
+
+- Pattern in exportStyle: default
+
+---
+id: microfeed-instinct-test-file-pattern
+trigger: "When creating a new test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Test File Pattern
+
+## Action
+
+Name the file with the pattern *.test.ts
+
+## Evidence
+
+- Pattern in testing.filePattern
+- Files in tests/unit/**/*.test.ts
+
+---
+id: microfeed-instinct-test-framework-vitest
+trigger: "When writing or running tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Test Framework Vitest
+
+## Action
+
+Use the Vitest testing framework
+
+## Evidence
+
+- Pattern in testing.framework
+- Presence of vitest.config.ts
+
+---
+id: microfeed-instinct-test-types-unit-integration
+trigger: "When writing new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Test Types Unit Integration
+
+## Action
+
+Write unit or integration tests as appropriate
+
+## Evidence
+
+- Pattern in testing.testTypes
+
+---
+id: microfeed-instinct-test-location-separate
+trigger: "When organizing test files"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Test Location Separate
+
+## Action
+
+Place test files in a separate directory (e.g., tests/unit/)
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- Files in tests/unit/
+
+---
+id: microfeed-instinct-git-commit-freeform
+trigger: "When making a commit"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Git Commit Freeform
+
+## Action
+
+Write a concise, freeform commit message without a strict prefix
+
+## Evidence
+
+- Pattern in commits.type: freeform
+- Examples: 'Init commit for modernizing this project', 'Fix unit tests'
+
+---
+id: microfeed-instinct-git-commit-short
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Git Commit Short
+
+## Action
+
+Keep the commit message brief (average ~27 characters)
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: microfeed-instinct-fix-unit-tests-workflow
+trigger: "When unit tests are failing or need updating after code changes"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: NGshiyu/microfeed
+---
+
+# Microfeed Instinct Fix Unit Tests Workflow
+
+## Action
+
+Identify failing/outdated unit tests, edit test files to fix/update, and run the test suite to verify
+
+## Evidence
+
+- Workflow: fix-unit-tests
+- Commits: 'Fix unit tests'
+- Files: tests/unit/**/*.test.ts
+
